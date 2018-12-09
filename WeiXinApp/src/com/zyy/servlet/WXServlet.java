@@ -9,7 +9,6 @@ public class WXServlet extends javax.servlet.http.HttpServlet {
 
     }
 
-    // test to commit
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String signature = request.getParameter("signature");
         String timestamp = request.getParameter("timestamp");
