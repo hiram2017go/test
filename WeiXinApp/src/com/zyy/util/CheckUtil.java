@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class CheckUtil {
 
-    public static final String token = "zyyzuishuai001";
+    public static final String token = "zyyzuishuai002";
 
     public static boolean checkSignature(String signature,String timestamp, String nonce){
         //定义数组存放token,timestamp,nonce
@@ -28,8 +28,7 @@ public class CheckUtil {
             return null;
         }
 
-        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-                            'a', 'b', 'c', 'd', 'e', 'f'};
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9','a', 'b', 'c', 'd', 'e', 'f'};
 
         try{
             MessageDigest mdTemp = MessageDigest.getInstance("SHA1");
@@ -40,7 +39,7 @@ public class CheckUtil {
             char buf[] = new char[i * 2];
             int k = 0;
             for(int j = 0; j < i; j++){
-                byte byte0 = md[i];
+                byte byte0 = md[j];
                 buf[k++] = hexDigits[byte0 >>> 4 & 0xf];
                 buf[k++] = hexDigits[byte0 & 0xf];
             }
