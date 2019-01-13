@@ -40,7 +40,7 @@ public class CheckUtil {
             char buf[] = new char[i * 2];
             int k = 0;
             for(int j = 0; j < i; j++){
-                byte byte0 = md[i];
+                byte byte0 = md[j];
                 buf[k++] = hexDigits[byte0 >>> 4 & 0xf];
                 buf[k++] = hexDigits[byte0 & 0xf];
             }
